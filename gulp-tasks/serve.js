@@ -5,7 +5,6 @@ const reload = browserSync.reload;
 const clean = require('gulp-clean');
 const maps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
-const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
@@ -15,7 +14,8 @@ const less = require('gulp-less');
 
 // when served, watch files. call browser-sync
 gulp.task('serve', ['browser-sync'], function() {
-  gulp.watch('public/assets/less/*.less', ['less']);
+  gulp.watch('public/assets/styleguide-less/*/*.less', ['styleguide-less']);
+  gulp.watch('public/assets/less/*/*.less', ['less']);
   gulp.watch('public/assets/js/*/*.js', ['concatScripts']);
 });
 
@@ -30,7 +30,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 });
 
 // nodemon calls less and concatScripts
-gulp.task('nodemon', ['less', 'concatScripts'], function(done) {
+gulp.task('nodemon', ['styleguide-less', 'less', 'concatScripts'], function(done) {
   let running = false;
   return nodemon({
     script: 'server.js',
@@ -49,13 +49,24 @@ gulp.task('nodemon', ['less', 'concatScripts'], function(done) {
   })
 });
 
-// take the styles in styles.scss and convert them to .css and push them to the assets/css folder
+// take the styleguide template styles in bootstrap.less and convert them to .css and push them to the assets/css folder
 gulp.task('less', function() {
   return gulp.src('public/assets/less/bootstrap.less')
     .pipe(maps.init())
     .pipe(less())
     .pipe(cleanCSS())
     .pipe(rename('styles.min.css'))
+    .pipe(maps.write('./'))
+    .pipe(gulp.dest('build/css'))
+});
+
+// take the styleguide template styles in bootstrap.less and convert them to .css and push them to the assets/css folder
+gulp.task('styleguide-less', function() {
+  return gulp.src('public/assets/styleguide-less/bootstrap.less')
+    .pipe(maps.init())
+    .pipe(less())
+    .pipe(cleanCSS())
+    .pipe(rename('styleguide-styles.min.css'))
     .pipe(maps.write('./'))
     .pipe(gulp.dest('build/css'))
 });

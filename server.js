@@ -10,12 +10,6 @@ const exphbs = require('express-handlebars');
 const fs = require('fs');
 
 /**
- * Get static html folder
- */
-const staticHTMLFolder = './public/pages';
-var staticHTMLpages = [];
-
-/**
  * Create Express server.
  */
 const app = express();
@@ -23,28 +17,23 @@ const app = express();
 /**
  * Express configuration.
  */
+// set port to 8080
 app.set('port', 8080);
+// set the path read the views folder that holds the handlebar html templates
 app.set('views', path.join(__dirname, 'views'));
+// set the teplating engine to render handlebars with default layout and any custom handlebar helper functions
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   helpers: {} // no handlebar helpers currently
 }));
+// set the view engine to handlebars
 app.set('view engine', 'handlebars');
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+// read the build folder when server is running
 app.use('/build', express.static(__dirname + '/build'));
-// app.use('/public', express.static(__dirname + '/public'));
-
-/**
- * Get list of all static html pages in project
- */
-fs.readdir(staticHTMLFolder, (err, files) => {
-  files.forEach(file => {
-    file = file.split('.html')[0];
-    staticHTMLpages.push(`/${file}`);
-  });
-});
+app.use('/public', express.static(__dirname + '/public'));
 
 /**
  * Get all routes
@@ -52,10 +41,10 @@ fs.readdir(staticHTMLFolder, (err, files) => {
 require('./controllers/html-routes.js')(app);
 
 /**
- * Check if there is a static html page, if there is show that html page, else show 404 page if no route has been hit
+ * show 404 page if no route has been hit
  */
 app.get('*', function(req, res) {
-  staticHTMLpages.includes(`${req.url}`) ? res.sendFile(path.join(__dirname, `public/pages${req.url}.html`)) : res.render('404');
+  res.render('404');
 });
 
 /**
