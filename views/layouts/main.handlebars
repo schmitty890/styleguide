@@ -4,41 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{hbsObject.pageData.title}}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" type="text/css" />
     <!-- built out css styleguide-styles -->
     <link rel="stylesheet" href="/build/css/styleguide-styles.min.css" type="text/css">
     <!-- built out css prototype css styles -->
     <link rel="stylesheet" href="/build/css/styles.min.css" type="text/css">
-    {{!-- favicon --}}
-    <link rel="shortcut icon" href="public/assets/images/logo.png" type="favicon.png">
   </head>
-  <body class="">
+  <body>
     <div class="l-page-layout l-page-layout--two-column-fixed">
-      <!--c-header-->
       {{> styleguide-template-general/header}}
-      <!--end c-header-->
-
-      <!--end l-page-layout__secondary-->
-
       <div class="l-page-layout__main">
         {{{body}}}
-
-        <!--end role=main-->
-        {{!-- main body --}}
-        {{!-- {{{body}}} --}}
-        {{!-- end main body --}}
-        <!--c-footer-->
         {{> styleguide-template-general/footer}}
-        <!--end c-footer-->
-        {{!-- {{> header}} --}}
-
-        {{!-- {{> footer}} --}}
-        {{!-- js scripts --}}
         {{> styleguide-template-general/scripts}}
-        {{!-- end js scripts --}}
       </div>
-      <!--end l-page-layout__main-->
     </div>
-    <!--end l--two-column-fixed-->
   </body>
 </html>

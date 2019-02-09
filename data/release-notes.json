@@ -1,0 +1,19 @@
+{
+  "title": "Style Guide | Release Notes",
+  "header": {
+    "headerTitle": "Release Notes",
+    "headerDescription": "Find out what is released"
+  },
+  "release-notes": {
+    "release": [{
+      "version": "Getting Started",
+      "title": "title",
+      "date": "01/25/2019",
+      "items": [{
+        "list-item": "one"
+      },{
+        "list-item": "two"
+      }]
+    }]
+  }
+}

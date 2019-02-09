@@ -1,0 +1,31 @@
+{
+  "menu": {
+    "categories": [{
+      "title": "Getting Started",
+      "link": "/getting-started"
+    },{
+      "title": "Styles",
+      "link": "#",
+      "sublinks": [{
+        "title": "overview",
+        "link": "/styles/overview"
+      },{
+        "title": "colors",
+        "link": "/styles/colors"
+      }]
+    }, {
+      "title": "Components",
+      "link": "#",
+      "sublinks": [{
+        "title": "overview",
+        "link": "/components/overview"
+      }, {
+        "title": "alerts",
+        "link": "/components/alerts"
+      }]
+    }, {
+      "title": "Release Notes",
+      "link": "/release-notes"
+    }]
+  }
+}
