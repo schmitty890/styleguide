@@ -17,8 +17,16 @@
             </div>
           </div>
         </div>
-        <div>Any explanation needed</div>
-        <div class="view-code">{{this.snippet}}</div>
+{{!-- &lt;div&gt;yee&lt;/div&gt; --}}
+
+{{!-- {{escapeHtml snippet}} --}}
+        {{!-- {{this.snippet}} --}}
+<button class="btn" id="test" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
+    Copy to clipboard
+</button>
+        <pre class="line-numbers test" data-clipboard-text="this"><code class="language-markup"></code></pre>
+        {{!-- <pre class="line-numbers"><code class="language-markup">&lt;p class="2020" id="ok2o"&gt;one&lt;/p&gt;</code></pre> --}}
+        {{!-- <div class="view-code">{{this.snippet}}</div> --}}
       {{/each}}
   {{/each}}
 </div>

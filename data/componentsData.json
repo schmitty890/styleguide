@@ -34,7 +34,7 @@
               "title": "Processing error",
               "message": "An error occurred while attempting to process your payment. Please try again later.",
               "close": true,
-              "snippet": ""
+              "snippet": "<pre><code class=\"language-css\">p { color: red }</code></pre>"
             },{
               "alert-class": "msg--state-success",
               "aria-label": "Success",
