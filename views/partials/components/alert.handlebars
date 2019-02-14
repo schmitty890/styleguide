@@ -17,8 +17,15 @@
             </div>
           </div>
         </div>
-        <div>Any explanation needed</div>
-        <div class="view-code">{{this.snippet}}</div>
+        {{!-- code snippet --}}
+        <div class="code-snippet" style="margin-bottom: 25px;">
+          <pre class="line-numbers code-to-copy">
+            <code class="language-markup"></code>
+          </pre>
+          {{!-- copy to clipboard --}}
+          <i title="Copy That Snippet!" class="fa fa-clipboard copy"></i>
+        </div>
+        <hr>
       {{/each}}
   {{/each}}
 </div>

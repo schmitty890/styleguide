@@ -103,11 +103,11 @@
   }
 
   // Copy to clipboard functionality
-  var clipboard = new Clipboard('.pattern-code-copy-btn');
+  // var clipboard = new Clipboard('.pattern-code-copy-btn');
 
-  clipboard.on('success', function(e) {
-      e.trigger.textContent = 'Copied';
-  });
+  // clipboard.on('success', function(e) {
+  //     e.trigger.textContent = 'Copied';
+  // });
 
   //iframe viewport change size
 

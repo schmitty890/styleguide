@@ -51,7 +51,7 @@ gulp.task('nodemon', ['styleguide-less', 'less', 'concatScripts'], function(done
     running = true;
   }).on('restart', function() {
     console.log('--------------------restart----------------');
-    sertTimeout(function() {
+    setTimeout(function() {
       reload();
     }, 2000);
   });
