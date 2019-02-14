@@ -17,16 +17,15 @@
             </div>
           </div>
         </div>
-{{!-- &lt;div&gt;yee&lt;/div&gt; --}}
-
-{{!-- {{escapeHtml snippet}} --}}
-        {{!-- {{this.snippet}} --}}
-<button class="btn" id="test" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
-    Copy to clipboard
-</button>
-        <pre class="line-numbers test" data-clipboard-text="this"><code class="language-markup"></code></pre>
-        {{!-- <pre class="line-numbers"><code class="language-markup">&lt;p class="2020" id="ok2o"&gt;one&lt;/p&gt;</code></pre> --}}
-        {{!-- <div class="view-code">{{this.snippet}}</div> --}}
+        {{!-- code snippet --}}
+        <div class="code-snippet" style="margin-bottom: 25px;">
+          <pre class="line-numbers code-to-copy">
+            <code class="language-markup"></code>
+          </pre>
+          {{!-- copy to clipboard --}}
+          <i title="Copy That Snippet!" class="fa fa-clipboard copy"></i>
+        </div>
+        <hr>
       {{/each}}
   {{/each}}
 </div>
