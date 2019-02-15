@@ -2,9 +2,11 @@
   "menu": {
     "categories": [{
       "title": "Getting Started",
+      "show": true,
       "link": "/getting-started"
     },{
       "title": "Styles",
+      "show": false,
       "link": "#",
       "sublinks": [{
         "title": "overview",
@@ -15,6 +17,7 @@
       }]
     }, {
       "title": "Components",
+      "show": true,
       "link": "#",
       "sublinks": [{
         "title": "overview",
@@ -25,6 +28,7 @@
       }]
     }, {
       "title": "Release Notes",
+      "show": true,
       "link": "/release-notes"
     }]
   }

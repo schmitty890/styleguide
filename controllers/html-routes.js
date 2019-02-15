@@ -4,7 +4,7 @@ var guidelinesData = require('../data/guidelinesData.json');
 var stylesData = require('../data/stylesData.json');
 var componentsData = require('../data/componentsData');
 var navigation = require('../data/navigation.json');
-var releaseNotesData = require('../data/release-notes.json');
+var releaseNotesData = require('../data/releaseNotesData.json');
 
 module.exports = function (app) {
   // Home Page
@@ -56,6 +56,8 @@ module.exports = function (app) {
       pageData: releaseNotesData,
       nav: navigation
     };
+
+    console.log(releaseNotesData);
 
     res.render('pages/release-notes', {
       hbsObject: hbsObject

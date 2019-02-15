@@ -1,4 +1,42 @@
 
+
+
+
+// Add a has to the url when the user clicks on the section header, this allows for ease of sharing links
+var AddIDToURL = (function() {
+
+  //another function private to Module
+  const bindClicks = function() {
+    $(document).on('click', '.anchor-link', function() {
+      var id = $(this).attr('id');
+      window.location.hash = '';
+      var url = document.location.href + id;
+      document.location = url;
+    });
+  };
+
+  // this init function initializes the functions to be executed
+  const init = function() {
+    bindClicks();
+  };
+
+  //return the init function, assign it to init so it can be used outside of this Module as AddIDToURL.init();
+  return {
+    init: init
+  }
+})();
+
+//how we call the AddIDToURL Module to execute its functions
+AddIDToURL.init();
+
+
+
+
+
+
+
+
+
 $(function() {
   var code = $('.styleguide-code').first().html();
   var $code = $('.styleguide-code');
