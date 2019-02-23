@@ -3,5 +3,31 @@
   "header": {
     "headerTitle": "Styles",
     "headerDescription": "Styles Description"
+  },
+  "categories": {
+    "colors": {
+      "show": true,
+      "title": "colors",
+      "link": "colors",
+      "status-color": "red",
+      "status": "Not ready",
+      "version": "v0.1",
+      "last-updated": "02/22/2019",
+      "description": "Show me your colors.",
+      "section": {
+        "fill-colors": {
+          "description": "fill colors description",
+          "values": [ {
+            "class": ".fill-facebook",
+            "hex": "#3b5998",
+            "variable": "$fill-facebook"
+          }, {
+            "class": ".fill-buzzfeed",
+            "hex": "#ee3322",
+            "variable": "$fill-buzzfeed"
+          }]
+        }
+      }
+    }
   }
 }

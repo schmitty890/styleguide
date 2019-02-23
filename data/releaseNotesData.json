@@ -8,25 +8,20 @@
     "release": [{
       "version": "1.0.2",
       "show": true,
-      "title": "title2",
-      "date": "01/27/2019",
+      "title": "Colors",
+      "date": "02/22/2019",
       "items": [{
-        "change": "potential breaking change",
-        "list-item": "update number one"
-      },{
-        "change": "potential breaking change",
-        "list-item": "update number two"
+        "change": "added",
+        "list-item": "color schemes, variables and values"
       }]
     }, {
       "version": "1.0.1",
       "show": true,
-      "title": "title1",
-      "date": "01/25/2019",
+      "title": "Components Overview",
+      "date": "02/17/2019",
       "items": [{
         "change": "added",
-        "list-item": "update number one"
-      },{
-        "list-item": "update number two"
+        "list-item": "components overview page which list current listed components and their description"
       }]
     }, {
       "version": "1.0.0",
@@ -35,10 +30,7 @@
       "date": "02/14/2019",
       "items": [{
         "change": "added",
-        "list-item": "update number one"
-      },{
-        "change": "breaking change",
-        "list-item": "update number two"
+        "list-item": "alert component"
       }]
     }, {
       "version": "0.0.0",

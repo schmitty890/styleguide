@@ -1,0 +1,22 @@
+<main role="main">
+  <div class="l-container">
+    {{> styleguide-template-general/c-page-header}}
+    <!-- end c-page header -->
+    <ul class="c-card-list l-grid l-grid--3up">
+      {{#each hbsObject.pageData.categories}}
+        {{#if this.show}}
+        <li class="c-card-list__item l-grid__item">
+          <a href="/styles/{{this.link}}" class="c-card">
+            <div class="c-card__body">
+              <h2 class="c-card__title">
+                <span class="c-card__title-text">{{this.title}}</span>
+              </h2>
+              <p class="c-card__desc">{{this.description}}</p>
+            </div>
+          </a>
+        </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</main>

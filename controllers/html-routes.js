@@ -37,15 +37,45 @@ module.exports = function (app) {
     });
   });
 
+  // Styles Pages
+  app.get('/styles/:category', function(req, res) {
+    var category = req.params.category;
+    var hbsObject = {
+      nav: navigation
+    };
+    var page = '';
+
+    if(category === 'overview') {
+      hbsObject.pageData = stylesData;
+      page = 'pages/styles-overview';
+    } else {
+      hbsObject.pageData = stylesData.categories[category];
+      page = 'pages/styles';
+    }
+
+    console.log(hbsObject);
+    res.render(page, {
+      hbsObject: hbsObject
+    })
+  });
+
   // Components Pages
   app.get('/components/:category', function(req, res) {
     var category = req.params.category;
     var hbsObject = {
-      pageData: componentsData.components[category],
       nav: navigation
     };
+    var page = '';
 
-    res.render('pages/components', {
+    if(category === 'overview') {
+      hbsObject.pageData = componentsData;
+      page = 'pages/components-overview';
+    } else {
+      hbsObject.pageData = componentsData.components[category];
+      page = 'pages/components';
+    }
+
+    res.render(page, {
       hbsObject: hbsObject
     });
   });

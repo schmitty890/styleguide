@@ -6,8 +6,9 @@
   },
   "components": {
     "overview": {
-      "show": true,
+      "show": false,
       "title": "overview",
+      "link": "alerts",
       "status-color": "",
       "status": "",
       "version": "v0.1",
@@ -17,6 +18,7 @@
     "alerts": {
       "show": true,
       "title": "alerts",
+      "link": "alerts",
       "status-color": "green",
       "status": "Ready to use",
       "version": "v0.1",

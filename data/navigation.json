@@ -6,7 +6,7 @@
       "link": "/getting-started"
     },{
       "title": "Styles",
-      "show": false,
+      "show": true,
       "link": "#",
       "sublinks": [{
         "title": "overview",
