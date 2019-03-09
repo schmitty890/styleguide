@@ -1,6 +1,26 @@
 {{#if hbsObject.pageData.show}}
 <div class="flex-item">
-  <div>{{hbsObject.pageData.title}}</div>
-  <div>loop through a template here to display colors and their sections</div>
+  <div>{{hbsObject.pageData.description}}</div>
+  {{#each hbsObject.pageData.section}}
+    <h2 id="{{this.id}}" class="anchor-link">{{this.title}} <span>#</span></h2>
+    <ul class="c-card-list l-grid l-grid--3up">
+      {{#each this.values}}
+        <li class="c-card-list__item l-grid__item" style="background-color:{{this.hex}};">
+          <a href="#" class="c-card">
+            <div class="c-card__body">
+              <h2 class="c-card__title">
+              <span class="c-card__title-text" style="color: white;">{{this.name}}</span>
+              </h2>
+              <span class="c-card__desc" style="color: white;">{{this.class}}</span>
+              <span class="c-card__desc" style="color: white;">{{this.variable}}</span>
+              <span class="c-card__desc" style="color: white;">{{this.hex}}</span>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+
+    </ul>
+    <hr>
+  {{/each}}
 </div>
 {{/if}}

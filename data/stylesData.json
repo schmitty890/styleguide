@@ -2,7 +2,7 @@
   "title": "Style Guide | Styles",
   "header": {
     "headerTitle": "Styles",
-    "headerDescription": "Styles Description"
+    "headerDescription": "Styles description for overview styles page"
   },
   "categories": {
     "colors": {
@@ -12,19 +12,221 @@
       "status-color": "red",
       "status": "Not ready",
       "version": "v0.1",
-      "last-updated": "02/22/2019",
-      "description": "Show me your colors.",
+      "last-updated": "03/08/2019",
+      "description": "Color less variables with hex values used across Merrill assets.",
       "section": {
-        "fill-colors": {
-          "description": "fill colors description",
+        "primary-lob-colors": {
+          "id": "primary-lob-colors",
+          "title": "primary lob specific colors",
+          "description": "primary lob-specific colors",
           "values": [ {
-            "class": ".fill-facebook",
-            "hex": "#3b5998",
-            "variable": "$fill-facebook"
-          }, {
-            "class": ".fill-buzzfeed",
+            "name": "broadcort",
+            "class": "",
+            "hex": "#006B87",
+            "variable": "@color-broadcort"
+          },{
+            "name": "affluent",
+            "class": "",
             "hex": "#ee3322",
-            "variable": "$fill-buzzfeed"
+            "variable": "@color-affluent"
+          },{
+            "name": "edge",
+            "class": "",
+            "hex": "#009cde",
+            "variable": "@color-edge"
+          },{
+            "name": "edge alt",
+            "class": "",
+            "hex": "#0073cf",
+            "variable": "@color-edge-alt"
+          },{
+            "name": "edge alt offset",
+            "class": "",
+            "hex": "#b6dcfc",
+            "variable": "@color-edge-alt-offset"
+          },{
+            "name": "advisory",
+            "class": "",
+            "hex": "#000a23",
+            "variable": "@color-advisory"
+          },{
+            "name": "advisory alt",
+            "class": "",
+            "hex": "#000a23",
+            "variable": "@color-advisory-alt"
+          },{
+            "name": "merrill lynch",
+            "class": "",
+            "hex": "#0052c2",
+            "variable": "@color-ml"
+          },{
+            "name": "bank",
+            "class": "",
+            "hex": "#dc1431",
+            "variable": "@color-bank"
+          },{
+            "name": "bank alt",
+            "class": "",
+            "hex": "#c41230",
+            "variable": "@color-bank-alt"
+          },{
+            "name": "accent light",
+            "class": "",
+            "hex": "#ea7600",
+            "variable": "@color-accent-light"
+          },{
+            "name": "accent",
+            "class": "",
+            "hex": "#b94700",
+            "variable": "@"
+          }]
+        },
+        "gray-colors": {
+          "id": "gray-colors",
+          "title": "shades of gray colors",
+          "description": "shades of gray colors",
+          "values": [ {
+            "name": "gray lightest",
+            "class": "",
+            "hex": "#f9f7f4",
+            "variable": "@color-gray-lightest"
+          },{
+            "name": "gray lighter",
+            "class": "",
+            "hex": "#ece6dd",
+            "variable": "@color-gray-lighter"
+          },{
+            "name": "gray light",
+            "class": "",
+            "hex": "#d1c9c0",
+            "variable": "@color-gray-light"
+          },{
+            "name": "gray",
+            "class": "",
+            "hex": "#9d8e80",
+            "variable": "@color-gray"
+          },{
+            "name": "gray dark",
+            "class": "",
+            "hex": "#857363",
+            "variable": "@color-gray-dark"
+          },{
+            "name": "gray darker",
+            "class": "",
+            "hex": "#6b5e51",
+            "variable": "@color-gray-darker"
+          },{
+            "name": "gray darkest",
+            "class": "",
+            "hex": "#524940",
+            "variable": "@color-gray-darkest"
+          }]
+        },
+        "true-gray-colors": {
+          "id": "true-gray-colors",
+          "title": "true gray colors",
+          "description": "true gray colors",
+          "values": [ {
+            "name": "true gray",
+            "class": "",
+            "hex": "#666666",
+            "variable": "@color-true-gray"
+          },{
+            "name": "true gray dark",
+            "class": "",
+            "hex": "#333333",
+            "variable": "@color-true-gray-dark"
+          },{
+            "name": "pale blue",
+            "class": "",
+            "hex": "#ecf6fd",
+            "variable": "@color-pale-blue"
+          },{
+            "name": "white",
+            "class": "",
+            "hex": "#fff",
+            "variable": "@color-white"
+          },{
+            "name": "black",
+            "class": "",
+            "hex": "#000",
+            "variable": "@color-black"
+          },{
+            "name": "gray darker",
+            "class": "",
+            "hex": "#6b5e51",
+            "variable": "@color-gray-darker"
+          },{
+            "name": "gray darkest",
+            "class": "",
+            "hex": "#524940",
+            "variable": "@color-gray-darkest"
+          }]
+        },
+        "contextual-colors": {
+          "id": "contextual-colors",
+          "title": "contextual colors",
+          "description": "contextual colors",
+          "values": [ {
+            "name": "dark copy",
+            "class": "",
+            "hex": "#000",
+            "variable": "@color-dark-copy"
+          },{
+            "name": "body copy",
+            "class": "",
+            "hex": "#333333",
+            "variable": "@color-body-copy"
+          },{
+            "name": "light copy",
+            "class": "",
+            "hex": "#666",
+            "variable": "@color-light-copy"
+          },{
+            "name": "faded copy",
+            "class": "",
+            "hex": "#999",
+            "variable": "@color-faded-copy"
+          },{
+            "name": "success",
+            "class": "",
+            "hex": "#070",
+            "variable": "@color-success"
+          },{
+            "name": "info",
+            "class": "",
+            "hex": "@color-edge-alt",
+            "variable": "@color-info"
+          },{
+            "name": "warning",
+            "class": "",
+            "hex": "@color-accent",
+            "variable": "@color-warning"
+          },{
+            "name": "error",
+            "class": "",
+            "hex": "#c00",
+            "variable": "@color-error"
+          },{
+            "name": "pale warning",
+            "class": "",
+            "hex": "#fcf0e6",
+            "variable": "@color-pale-warning"
+          },{
+            "name": "pale error",
+            "class": "",
+            "hex": "#f9dee1",
+            "variable": "@color-pale-error"
+          },{
+            "name": "pale success",
+            "class": "",
+            "hex": "#eef6e6",
+            "variable": "@color-pale-success"
+          },{
+            "name": "pale info",
+            "class": "",
+            "hex": "@color-pale-blue",
+            "variable": "@color-pale-info"
           }]
         }
       }
