@@ -19,6 +19,7 @@ tmp
 #Build
 build/
 .nyc_output/*
+coverage/
 
 #Libraries from npm packages
 public/js/lib/bootstrap.min*
