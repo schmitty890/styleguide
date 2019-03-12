@@ -15,7 +15,7 @@ module.exports = function (app) {
       headerData: componentsData,
       nav: navigation
     };
-    console.log(hbsObject);
+    // console.log(hbsObject);
     // console.log(hbsObject);
     res.render('index', {
       title: 'Home', // pass any value to handlebar template
@@ -53,7 +53,7 @@ module.exports = function (app) {
       page = 'pages/styles';
     }
 
-    console.log(hbsObject);
+    // console.log(hbsObject);
     res.render(page, {
       hbsObject: hbsObject
     })
@@ -87,10 +87,14 @@ module.exports = function (app) {
       nav: navigation
     };
 
-    console.log(releaseNotesData);
+    // console.log(releaseNotesData);
 
     res.render('pages/release-notes', {
       hbsObject: hbsObject
     });
+  });
+
+  app.get('/api/components', function (req, res) {
+    res.send(componentsData);
   });
 };

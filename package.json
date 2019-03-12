@@ -42,6 +42,7 @@
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "^9.9.0"
+    "stylelint": "^9.9.0",
+    "supertest": "^4.0.0"
   }
 }

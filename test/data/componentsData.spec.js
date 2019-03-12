@@ -17,7 +17,7 @@ var alert = {
 describe('Components describing componentsData.json', function() {
   describe('Components title', function() {
     it('Components title should return Style Guide | Components', function() {
-      assert.equal(componentTitle, 'Style Guide | Components');
+      assert.equal(components.componentTitle, 'Style Guide | Components');
     });
   });
 
