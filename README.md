@@ -1,15 +1,15 @@
 # [Styleguide name]
 
-## Purpose :crystal_ball:
+# Purpose :crystal_ball:
 
 [Styleguide name] is [name] CSS style guide. Influenced by frameworks like Basscss, [Styleguide name] uses immutable, atomic CSS classes to rapidly prototype and develop features, providing consistent styling options along with the flexibility to create new layouts and designs without the need to write additional CSS. Additionally, a few globally-reusable HTML and CSS components are available to help new apps spin up quickly without having to reinvent the wheel each time (with more on the way).
 
-To view a more readable version of this markdown, copy and paste it in https://stackedit.io/app
+:exclamation: To view a more readable version of this markdown, copy and paste it in https://stackedit.io/app :exclamation:
 
 
 # Getting Started
 
-- Fork or clone the GitHub repo to your machine.
+- Fork or clone the repo to your machine.
 - Ensure that you npm, node, mocha and gulp installed on your machine.
 - In your terminal, navigate to the cloned directory. `npm install` the dependencies and run `gulp`
 
@@ -22,25 +22,25 @@ To view a more readable version of this markdown, copy and paste it in https://s
 - 🎉Happy developing!🎉
 
 
-## How it's built :wrench:
+# How it's built :wrench:
 
-<b>Tech stack</b> :computer:
+### Tech stack :computer:
 - [Node.js](https://nodejs.org/en/)
 - [Express.js](https://www.npmjs.com/package/express)
 - [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 
-<b>Task runner</b> :runner:
+### Task runner :runner:
 - [Gulp](https://gulpjs.com/)
 
-<b>Libraries used</b> :books:
+### Libraries used :books:
 - [Prism.js](https://prismjs.com/)
 - [Clipboard.js](https://clipboardjs.com/)
 - [Moment.js](https://momentjs.com/)
 
-<b>Linted with</b>
+### Linted with
 - tbd
 
-<b>Tested with</b>
+### Tested with
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
 
@@ -48,7 +48,7 @@ To view a more readable version of this markdown, copy and paste it in https://s
 
 
 
-## Application Structure
+# Application Structure :open_file_folder:
     .
     ├── controllers                                     # controller folder
     │   └── html-routes.js                              # routes defined
@@ -159,7 +159,7 @@ To view a more readable version of this markdown, copy and paste it in https://s
 
 
 
-# Development 👨‍💻
+# Development 👨‍💻 :construction_worker:
 
 The command `npm start` will automatically launch the project. navigate to `http://localhost:3000/`
 
@@ -171,18 +171,18 @@ Less files are located at `public/assets/less/**/*.less`. Editing these files an
 
 If you are updating any file outside of the `/public` or the `/views` folder, you will need to stop and restart your server to see those changes reflected. As of now, gulp only watches changes on all the client side javascript and all the less files.
 
-### Branching process
+### Branching process (:exclamation:THIS HAS NOT BEEN SETUP YET:exclamation:)
 
 Include branching strategy and how to contribute when more contributors arrive.
 
-### Linting
+### Linting (:exclamation:THIS HAS NOT BEEN SETUP YET:exclamation:)
 
 Before you push your branch up to the `develop` branch, ensure you lint your code.
 
 run `npm run -s eslint .` this will show if you have any ESLint errors or warnings.
 If you have any errors, please fix them. if you have warnings that could slide, push your code up or talk with a team member.
 
-### Unit Testing
+### Unit Testing (:exclamation:THIS HAS NOT BEEN SETUP YET:exclamation:)
 
 Before you push your branch up to the `develop` branch, ensure you test your code.
 
@@ -191,7 +191,7 @@ run `npm run coverage` to view the code coverage report.
 Please provide decent unit tests. If we expect a string, write a unit test so that when this app gets updated in the future, the devs working on it will have an idea of what was intended.
 
 
-# Find a bug? :bug: 🕵️
+# Find a bug? :bug: 🕵️ (:exclamation:THIS HAS NOT BEEN SETUP YET:exclamation:)
 
 Let us know by emailing us at distributionlist@bankofamerica.com
 Providing a detailed description of what the issue is including answers to the following questions.
