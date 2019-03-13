@@ -43,6 +43,8 @@ app.use('/public', express.static(__dirname + '/public'));
  * Get all routes
  */
 require('./controllers/html-routes.js')(app);
+require('./controllers/bol-routes/api-routes.js')(app);
+require('./controllers/bol-routes/html-routes.js')(app);
 
 /**
  * show 404 page if no route has been hit

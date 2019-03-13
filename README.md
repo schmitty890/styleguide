@@ -201,3 +201,172 @@ Providing a detailed description of what the issue is including answers to the f
 - what is the version of the browser you are using?
 - what is the expected behavior?
 - what is the actual behavior?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Application Structure :open_file_folder:
+    .
+    ├── controllers                                     # controller folder
+    │   └── html-routes.js                              # routes defined
+    ├── data                                            # data folder holds all data
+    │   └── componentsData.json                         # componentsData holds all data about components
+    ├── public                                          # public folder
+    │   └── assets                                      # assets folder holds all client side js and less files
+    │       ├── images                                  # images folder holds all images
+    │       ├── js                                      # js folder holds client side js
+    │       │   └── custom                              # custom folder is a group of client side javascripts
+    │       │       └── main.js                         # main.js is a client side javascript
+    │       ├── less-bol                                # less folder holds bol styles
+    │       │   ├── abstracts                           # abstracts holds less mixins and variables
+    │       │   │   ├── mixins.less                     #
+    │       │   │   └── variables.less                  #
+    │       │   ├── components                          # components holds merrill components
+    │       │   │   └── alert.less                      #
+    │       │   ├── config                              # 
+    │       │   │   └── micro-grid.less                 #
+    │       │   ├── layout                              #
+    │       │   ├── utilities                           #
+    │       │   └── styles.less                         # all less-bol partials in the less folder get read into styles.less
+    │       ├── less-edge                               # less folder holds edge styles
+    │       │   ├── abstracts                           # abstracts holds less mixins and variables
+    │       │   │   ├── mixins.less                     #
+    │       │   │   └── variables.less                  #
+    │       │   ├── components                          # components holds edge components
+    │       │   │   └── alert.less                      #
+    │       │   ├── config                              # 
+    │       │   │   └── micro-grid.less                 #
+    │       │   ├── layout                              #
+    │       │   ├── utilities                           #
+    │       │   └── styles.less                         # all less-edge partials in the less folder get read into styles.less
+    │       ├── less-merrill                            # less folder holds merrill styles
+    │       │   ├── abstracts                           # abstracts holds less mixins and variables
+    │       │   │   ├── mixins.less                     #
+    │       │   │   └── variables.less                  #
+    │       │   ├── components                          # components holds merrill components
+    │       │   │   └── alert.less                      #
+    │       │   ├── config                              # 
+    │       │   │   └── micro-grid.less                 #
+    │       │   ├── layout                              #
+    │       │   ├── utilities                           #
+    │       │   └── styles.less                         # all less-merrill partials in the less folder get read into styles.less
+    │       ├── less-core                               # less folder holds core styles shared on all teams
+    │       │   ├── abstracts                           # abstracts holds less mixins and variables
+    │       │   │   ├── mixins.less                     #
+    │       │   │   └── variables.less                  #
+    │       │   ├── components                          # components holds core components
+    │       │   │   └── alert.less                      #
+    │       │   ├── config                              # 
+    │       │   │   └── micro-grid.less                 #
+    │       │   ├── layout                              #
+    │       │   ├── utilities                           #
+    │       │   └── styles.less                         # all less-core partials in the less folder get read into styles.less for gulp task
+    │       ├── styleguide-less                         # styleguide-less holds less styles specific to the look and feel of the styleguide itself
+    │       │   ├── abstracts                           # abstracts holds less mixins and variables
+    │       │   │   ├── mixins.less                     #
+    │       │   │   └── variables.less                  #
+    │       │   ├── base                                # base holds generic base styles for styleguide
+    │       │   │   ├── body.less                       #
+    │       │   │   ├── buttons.less                    #
+    │       │   │   ├── forms.less                      #
+    │       │   │   ├── headings.less                   #
+    │       │   │   ├── links.less                      #
+    │       │   │   ├── lists.less                      #
+    │       │   │   ├── main.less                       #
+    │       │   │   ├── media.less                      #
+    │       │   │   ├── reset.less                      #
+    │       │   │   ├── tables.less                     #
+    │       │   │   └── text.less                       #
+    │       │   ├── components                          # components holds generic component styles for styleguide
+    │       │   │   ├── banner.less                     #
+    │       │   │   ├── block.less                      #
+    │       │   │   ├── breadcrumbs.less                #
+    │       │   │   ├── button-group.less               #
+    │       │   │   ├── buttons.less                    #
+    │       │   │   ├── card.less                       #
+    │       │   │   ├── code-snippet.less               #
+    │       │   │   ├── footer-nav.less                 #
+    │       │   │   ├── footer.less                     #
+    │       │   │   ├── grid-nav.less                   #
+    │       │   │   ├── header.less                     #
+    │       │   │   ├── hero.less                       #
+    │       │   │   ├── icon.less                       #
+    │       │   │   ├── logo.less                       #
+    │       │   │   ├── nav.less                        #
+    │       │   │   ├── page-header.less                #
+    │       │   │   ├── pill.less                       #
+    │       │   │   ├── primary-nav.less                #
+    │       │   │   ├── release-notes.less              #
+    │       │   │   ├── section.less                    #
+    │       │   │   ├── table.less                      #
+    │       │   │   ├── tabs.less                       #
+    │       │   │   ├── text-passage.less               #
+    │       │   │   └── tile.less                       #
+    │       │   ├── layout                              # layout holds the generic layout for styleguide
+    │       │   │   └── layout.less                     #
+    │       │   ├── utilities                           # utilities holds generic utilities for styleguide
+    │       │   │   ├── display.less                    #
+    │       │   │   └── visibility.less                 #
+    │       │   └── styles.less                         # all partials in the styleguide-less folder get read into styles.less for gulp task
+    │       └── vendor                                  # vendor folder holds all third party libraries that styleguide needs to work as expected
+    │           └── vendor.js                           #
+    ├── test                                            # test folder holds all of our unit tests
+    │   └── controllers                                 # test folder for routes
+    │       └── html-routes.spec.js                     #
+    │   └── data                                        # test folder for json data
+    │       └── componentsData.spec.js                  #
+    ├── views                                           # handlebars views folder, holds helpers, layouts, pages, partials
+    │   ├── helpers                                     # helpers holds custom handlebar helpers
+    │   │   └── momentFromNowTime.js                    #
+    │   ├── layouts                                     # layouts holds main layouts
+    │   │   └── main.handlebars                         #
+    │   ├── pages                                       # pages holds main pages
+    │   │   ├── components-overview.handlebars          #
+    │   │   ├── components.handlebars                   #
+    │   │   ├── release-notes.handlebars                #
+    │   │   ├── styles-overview.handlebars              #
+    │   │   └── styles.handlebars                       #
+    │   ├── partials                                    # partials hold reusable handlebar template partials
+    │   │   ├── components                              #
+    │   │   │   └── alert.handlebars                    #
+    │   │   ├── styleguide-template-general             #
+    │   │   │   ├── c-page-component-header.handlebars  #
+    │   │   │   ├── c-page-header.handlebars            #
+    │   │   │   ├── footer.handlebars                   #
+    │   │   │   ├── header.handlebars                   #
+    │   │   │   └── scripts.handlebars                  #
+    │   │   └── styles                                  #
+    │   │       ├── colors.handlebars                   #
+    │   │       └── overview.handlebars                 #
+    │   ├── 404.handlebars                              # 404.handlebars is 404 page not found
+    │   └── index.handlebars                            # index.handlebars is main homepage
+    ├── .gitignore                                      #
+    ├── .tfignore                                       #
+    ├── package.json                                    #
+    ├── gulpfile.js                                     # gulp task runner which concatenates and minifies producing /build folder with client side javascripts and css files used in app
+    ├── server.js                                       # configure and start node server
+    └── README.md                                       # this document
