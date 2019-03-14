@@ -1,5 +1,5 @@
 var bolComponentsData = require('../../data/bol/components.json');
-var navigation = require('../../data/navigation.json');
+var navigation = require('../../data/general/navigation.json');
 
 module.exports = function (app) {
   // BOL Components Pages

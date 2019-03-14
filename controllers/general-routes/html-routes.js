@@ -1,10 +1,8 @@
-var indexData = require('../data/indexData.json');
-var gettingStartedData = require('../data/gettingStartedData.json');
-var guidelinesData = require('../data/guidelinesData.json');
-var stylesData = require('../data/stylesData.json');
-var componentsData = require('../data/componentsData');
-var navigation = require('../data/navigation.json');
-var releaseNotesData = require('../data/releaseNotesData.json');
+var indexData = require('../../data/general/indexData.json');
+var stylesData = require('../../data/stylesData.json');
+var componentsData = require('../../data/componentsData');
+var navigation = require('../../data/general/navigation.json');
+var releaseNotesData = require('../../data/releaseNotesData.json');
 
 module.exports = function (app) {
   // Home Page
@@ -25,16 +23,16 @@ module.exports = function (app) {
 
   // Getting Started Page
   app.get('/getting-started', function (req, res) {
-    // assign the handlebar object any data to be read into the template. this separates the data from the markup.
-    var hbsObject = {
-      pageData: gettingStartedData,
-      nav: navigation
-    };
-    // console.log(hbsObject);
-    res.render('partials/pages/getting-started', {
-      title: 'Home', // pass any value to handlebar template
-      hbsObject: hbsObject
-    });
+    // // assign the handlebar object any data to be read into the template. this separates the data from the markup.
+    // var hbsObject = {
+    //   pageData: gettingStartedData,
+    //   nav: navigation
+    // };
+    // // console.log(hbsObject);
+    // res.render('partials/pages/getting-started', {
+    //   title: 'Home', // pass any value to handlebar template
+    //   hbsObject: hbsObject
+    // });
   });
 
   // Styles Pages
