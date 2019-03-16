@@ -9,7 +9,7 @@
       "version": "1.0.2",
       "show": true,
       "title": "Colors",
-      "date": "02/22/2019",
+      "date": "2019-02-22",
       "items": [{
         "change": "added",
         "list-item": "color schemes, variables and values"
@@ -18,7 +18,7 @@
       "version": "1.0.1",
       "show": true,
       "title": "Components Overview",
-      "date": "02/17/2019",
+      "date": "2019-02-17",
       "items": [{
         "change": "added",
         "list-item": "components overview page which list current listed components and their description"
@@ -27,7 +27,7 @@
       "version": "1.0.0",
       "show": true,
       "title": "Styleguide Started",
-      "date": "02/14/2019",
+      "date": "2019-02-14",
       "items": [{
         "change": "added",
         "list-item": "alert component"
@@ -36,7 +36,7 @@
       "version": "0.0.0",
       "show": false,
       "title": "Default Release Example",
-      "date": "01/01/2019",
+      "date": "2019-01-01",
       "items": [{
         "change": "added",
         "list-item": "update number one - added as 'change' value"

@@ -12,7 +12,7 @@
       "status-color": "",
       "status": "",
       "version": "v0.1",
-      "last-updated": "01/27/2019",
+      "last-updated": "2019-01-27",
       "description": "Overview description."
     },
     "alerts": {
@@ -22,7 +22,7 @@
       "status-color": "red",
       "status": "Not ready",
       "version": "v0.1",
-      "last-updated": "02/27/2019",
+      "last-updated": "2019-02-27",
       "description": "Custom alert description area for BOL specific styles of alerts",
       "section": [
         {

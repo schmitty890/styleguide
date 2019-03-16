@@ -19,16 +19,19 @@ const app = express();
 app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
 // set the path read the views folder that holds the handlebar html templates
 app.set('views', path.join(__dirname, 'views'));
+
+const momentHbsHelpers = require('./views/helpers/moment');
+const classcheck = require('./views/helpers/classcheck');
+const upperCase = require('./views/helpers/upperCase');
+
 // set the teplating engine to render handlebars with default layout and any custom handlebar helper functions
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   helpers: {
-    upperCase: function(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
-    },
-    classcheck: function(str) {
-      if(str) return str.replace(/ /g,"-");
-    }
+    momentFromNowTime: momentHbsHelpers.momentFromNowTime,
+    dayMonthYear: momentHbsHelpers.dayMonthYear,
+    classcheck: classcheck,
+    upperCase: upperCase
   }
 }));
 // set the view engine to handlebars
