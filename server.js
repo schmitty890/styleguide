@@ -21,7 +21,7 @@ app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 
 const momentHbsHelpers = require('./views/helpers/moment');
-const classcheck = require('./views/helpers/classcheck');
+const regex = require('./views/helpers/regex');
 const upperCase = require('./views/helpers/upperCase');
 
 // set the teplating engine to render handlebars with default layout and any custom handlebar helper functions
@@ -30,7 +30,7 @@ app.engine('handlebars', exphbs({
   helpers: {
     momentFromNowTime: momentHbsHelpers.momentFromNowTime,
     dayMonthYear: momentHbsHelpers.dayMonthYear,
-    classcheck: classcheck,
+    replaceSpaceWithHyphen: regex.replaceSpaceWithHyphen,
     upperCase: upperCase
   }
 }));
@@ -46,6 +46,7 @@ app.use('/public', express.static(__dirname + '/public'));
  * Get all routes
  */
 require('./controllers/general-routes/html-routes.js')(app);
+require('./controllers/general-routes/api-routes.js')(app);
 require('./controllers/bol-routes/api-routes.js')(app);
 require('./controllers/bol-routes/html-routes.js')(app);
 

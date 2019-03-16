@@ -23,7 +23,7 @@
                     {{#if this.items}}
                     <ul style="margin-left: 75px;">
                       {{#each items}}
-                        <li class=""><span class="{{classcheck this.change}} bold">{{#if this.change}}{{this.change}}:{{/if}}</span> {{this.list-item}}</li>
+                        <li class=""><span class="{{replaceSpaceWithHyphen this.change}} bold">{{#if this.change}}{{this.change}}:{{/if}}</span> {{this.list-item}}</li>
                       {{/each}}
                     </ul>
                     {{/if}}
