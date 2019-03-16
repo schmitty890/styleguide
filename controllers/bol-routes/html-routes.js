@@ -1,3 +1,7 @@
+/**
+ * Description:   HTML Routes for bol routes
+ * Created:       03.12.2019
+ **/
 var bolComponentsData = require('../../data/bol/components.json');
 var navigation = require('../../data/general/navigation.json');
 

@@ -1,3 +1,7 @@
+/**
+ * Description:   HTML Routes for general routes
+ * Created:       03.12.2019
+ **/
 var indexData = require('../../data/general/indexData.json');
 var stylesData = require('../../data/stylesData.json');
 var componentsData = require('../../data/componentsData');

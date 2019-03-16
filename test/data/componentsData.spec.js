@@ -1,3 +1,8 @@
+/**
+ * Description:   Unit test file for data/componentsData
+ * Created:       03.10.2019
+ **/
+
 const assert = require('chai').assert;
 const componentsData = require('../../data/componentsData');
 

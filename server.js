@@ -1,4 +1,9 @@
 /**
+ * Description:   Main server file
+ * Created:       12.07.2018
+ **/
+
+/**
  * Module dependencies.
  */
 const express = require('express');

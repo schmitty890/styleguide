@@ -1,3 +1,7 @@
+/**
+ * Description:   API Routes for bol routes
+ * Created:       03.12.2019
+ **/
 var bolComponentsData = require('../../data/bol/components.json');
 
 

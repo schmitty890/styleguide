@@ -1,3 +1,7 @@
+/**
+ * Description:   Handlebar moment.js helper functions 
+ * Created:       03.15.2019
+ **/
 const moment = require('moment');
 
 var momentHelpers = {
