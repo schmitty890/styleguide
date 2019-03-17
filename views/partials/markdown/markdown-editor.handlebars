@@ -1,13 +1,4 @@
 <section class="c-section">
-  <div class="c-section-header">
-    <h1 class="c-section-header__title">Fine print</h1>
-  </div>
-  <div class="c-text-passage l-linelength-container">
-    <ul>
-      <li>Version: 0.1</li>
-      <li>Last Updated: DATE</li>
-    </ul>
-  </div>
   <div class="c-section-header markdown-section">
     <h1 class="c-section-header__title">Markdown Documentation</h1>
     <div>This markdown documentation is here to allow us, the people who build and use this documentation tool to freely add in any input towards documenting the UI assets accross merrill platforms. Feel free to jot any documentation down. Please be as consice as you can when documenting.</div>
@@ -18,8 +9,14 @@
 
   <div class="markdown-message"></div>
   <form>
-    <input class="markdown-nbk-id" type="" name="" placeholder="nbk id" style="width: 200px;">
-    <input class="markdown-commit-message" type="" name="" placeholder="message" style="">
+    <div class="c-text-passage l-linelength-container">
+      <ul>
+        <li>Enter your NBK ID: 
+      <input class="markdown-nbk-id" type="" name="" placeholder="nbk id" style="width: 200px;"></li>
+        <li>Enter a brief comment on what you are contributing (less than 10 words): 
+      <input class="markdown-commit-message" type="" name="" placeholder="message" style=""></li>
+      </ul>
+    </div>
     <textarea id="markdown-edit-section">
     </textarea>
   </form>

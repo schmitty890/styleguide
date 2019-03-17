@@ -1,3 +1,8 @@
+// Markdown editor javascript functionality
+// this file controls the saving of markdown files from the
+// simplemde editor (https://simplemde.com/)
+// client side javascript to capture values from form and send them to our server
+
 (function($){
 
   //the MarkdownEditor Module controls custom functionality for the markdown forms
@@ -14,7 +19,6 @@
       if(id !== '/') {
         url += id;  
       }
-      
       // console.log(url);
       // ajax call with post method with new markdown data above so we can save it on the server
       $.ajax(url, {
@@ -49,7 +53,15 @@
         if(nbkID === '' || commitMessage === '') {
           console.log('fill out your values');
           $('.markdown-message').html('');
-          $('.markdown-message').html('<div>Enter your nbk id and your "commit" message</div>');
+          $('.markdown-message').html(`
+                <div class="msg msg--state-error" role="alert" aria-live="assertive">
+                  <div class="msg__icon" aria-label="Error"></div>
+                  <div class="msg__body">
+                    <p class="msg__title">Error</p>
+                    <p class="msg__message">Enter your nbk id and your "commit" message</p>
+                  </div>
+                </div>
+              `);
           $('.markdown-nbk-id, .markdown-commit-message').css('border', '3px solid red');
         } else {
           var markdownValue = simplemde.value();
@@ -99,7 +111,6 @@
       });
     }
 
-
     //this init function initializes the functions ran
     var init = function() {
       getMostRecentlySavedMarkdown();
@@ -115,6 +126,5 @@
 
   //how we call the MarkdownEditor Module to execute its functions
   MarkdownEditor.init();
-
 
 })(jQuery);
