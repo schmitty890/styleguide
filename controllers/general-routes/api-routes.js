@@ -34,6 +34,7 @@ module.exports = function (app) {
         data = '[' + data + ']';
         // console.log(data);
         var markdown = JSON.parse(data);
+        // console.log(markdown); // to log what markdown data is being passed to client
         res.send(markdown);
       }
     });

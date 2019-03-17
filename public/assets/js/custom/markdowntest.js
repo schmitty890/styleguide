@@ -22,10 +22,19 @@
       }).done(function(data) {
         // data is recieved back from the server from app.get('/api/markdown/:category?/:path?'
         // get the last object in the array - the most recently saved object
-        var mostRecentMarkupVersion = data.slice(-1)[0].markdown;
+        var mostRecentMarkdown = {
+          markdown: data.slice(-1)[0].markdown,
+          time: data.slice(-1)[0].created_at,
+          nbkID: data.slice(-1)[0].nbkID
+        }
+        // var mostRecentMarkupVersion = data.slice(-1)[0].markdown;
+        // var mostRecentCreated = data.slice(-1)[0].created_at;
+        console.log(mostRecentMarkdown);
         // render the value with simplemde
-        simplemde.value(mostRecentMarkupVersion);
+        simplemde.value(mostRecentMarkdown.markdown);
         $('.fa.fa-eye.no-disable').trigger('click'); // toggle the preview mode @TODO: find option in simplemde library that toggles this. https://github.com/sparksuite/simplemde-markdown-editor
+        $('.markdown-message').html('');
+        $('.markdown-message').html('Last updated: ' + moment(mostRecentMarkdown.time).fromNow() + ' by ' + mostRecentMarkdown.nbkID);
       });
     }
 
@@ -35,39 +44,50 @@
       $(document).on("click", ".markdown-save-button", function(event) {
         // prevent default
         event.preventDefault();
-        var markdownValue = simplemde.value();
+        var nbkID = $('.markdown-nbk-id').val();
+        var commitMessage = $('.markdown-commit-message').val();
+        if(nbkID === '' || commitMessage === '') {
+          console.log('fill out your values');
+          $('.markdown-message').html('');
+          $('.markdown-message').html('<div>Enter your nbk id and your "commit" message</div>');
+          $('.markdown-nbk-id, .markdown-commit-message').css('border', '3px solid red');
+        } else {
+          var markdownValue = simplemde.value();
 
-        // console.log(markdownValue);
-        var newMarkdown = {
-          markdown: markdownValue,
-          created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
-          path: 'markdown' + window.location.pathname
-        };
-        // console.log(newMarkdown);
-        // ajax call with post method with new markdown data above so we can save it on the server
-        $.ajax("/markdown/new", {
-          type: "POST",
-          data: newMarkdown
-        }).then(function() {
-          // once done, log new markdown added and reload the location
-          // console.log("Your markdown has been saved!");
-          $('.markdown-section .markdown-message').html(`
-              <div class="msg msg--state-success" role="alert" aria-live="assertive">
-                <div class="msg__icon" aria-label="Success"></div>
-                <div class="msg__body">
-                  <p class="msg__title">Saved!</p>
-                  <p class="msg__message">you have saved your document. double check to ensure your changes are visable. if not, someone may have overwritten your changes :( its always a good idea that once you ahve your markdown ready, to copy your mardown, refresh the page, and edit and paste in your markup, to ensure you don't overwrite someone elses changes.</p>
+          // console.log(markdownValue);
+          var newMarkdown = {
+            markdown: markdownValue,
+            created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
+            path: 'markdown' + window.location.pathname,
+            nbkID: nbkID,
+            commitMessage: commitMessage
+          };
+          // console.log(newMarkdown);
+          // ajax call with post method with new markdown data above so we can save it on the server
+          $.ajax("/markdown/new", {
+            type: "POST",
+            data: newMarkdown
+          }).then(function() {
+            // once done, log new markdown added and reload the location
+            // console.log("Your markdown has been saved!");
+            $('.markdown-message').html(`
+                <div class="msg msg--state-success" role="alert" aria-live="assertive">
+                  <div class="msg__icon" aria-label="Success"></div>
+                  <div class="msg__body">
+                    <p class="msg__title">Saved!</p>
+                    <p class="msg__message">you have saved your document. double check to ensure your changes are visable. if not, someone may have overwritten your changes :( its always a good idea that once you ahve your markdown ready, to copy your mardown, refresh the page, and edit and paste in your markup, to ensure you don't overwrite someone elses changes.</p>
+                  </div>
                 </div>
-              </div>
-            `);
+              `);
 
-          // setTimeout(function() {
-          //   $('.markdown-section .markdown-message').html('');
-          // }, 5000);
-          $('.fa.fa-eye.no-disable').trigger('click'); // toggle the preview mode @TODO: find option in simplemde library that toggles this. https://github.com/sparksuite/simplemde-markdown-editor
-          $('.editor-toolbar').toggle();
-          // location.reload();
-        });
+            // setTimeout(function() {
+            //   $('.markdown-section .markdown-message').html('');
+            // }, 5000);
+            $('.fa.fa-eye.no-disable').trigger('click'); // toggle the preview mode @TODO: find option in simplemde library that toggles this. https://github.com/sparksuite/simplemde-markdown-editor
+            $('.editor-toolbar').toggle();
+            // location.reload();
+          });          
+        }
       });
     }
 
