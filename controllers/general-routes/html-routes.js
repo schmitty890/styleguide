@@ -7,6 +7,7 @@ var stylesData = require('../../data/stylesData.json');
 var componentsData = require('../../data/componentsData');
 var navigation = require('../../data/general/navigation.json');
 var releaseNotesData = require('../../data/releaseNotesData.json');
+var fs = require("fs");
 
 module.exports = function (app) {
   // Home Page
@@ -99,4 +100,17 @@ module.exports = function (app) {
   app.get('/api/components', function (req, res) {
     res.send(componentsData);
   });
+
+  // app.get('/test/markdown', function (req, res) {
+  //   // assign the handlebar object any data to be read into the template. this separates the data from the markup.
+  //   var hbsObject = {
+  //     pageData: indexData,
+  //     headerData: componentsData,
+  //     nav: navigation
+  //   };
+  //   res.render('markdown', {
+  //     hbsObject: hbsObject
+  //   });
+  // });
+
 };

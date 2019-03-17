@@ -16,6 +16,9 @@
       <!--end c-text-passage-->
     </div>
     <!--l-linelength-container-->
+    {{#if hbsObject.pageData.markdownEditable}}
+      {{> markdown/markdown-editor}}
+    {{/if}}
   </div>
   <!--end l-container-->
 </main>

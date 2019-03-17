@@ -3,5 +3,6 @@
   "header": {
     "headerTitle": "Style Guide",
     "headerDescription": "A boilerplate for creating style guides"
-  }
+  },
+  "markdownEditable": true
 }

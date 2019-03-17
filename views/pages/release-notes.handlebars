@@ -33,6 +33,9 @@
               {{/if}}
             {{/each}}
             <!-- End Release Notes -->
+            {{#if hbsObject.pageData.markdownEditable}}
+              {{> markdown/markdown-editor}}
+            {{/if}}
           </div>
         </div>
       </section>

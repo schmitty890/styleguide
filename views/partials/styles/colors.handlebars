@@ -22,5 +22,8 @@
     </ul>
     <hr>
   {{/each}}
+  {{#if hbsObject.pageData.markdownEditable}}
+    {{> markdown/markdown-editor}}
+  {{/if}}
 </div>
 {{/if}}

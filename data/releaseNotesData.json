@@ -4,6 +4,7 @@
     "headerTitle": "Release Notes",
     "headerDescription": "Find out what is released"
   },
+  "markdownEditable": true,
   "release-notes": {
     "release": [{
       "version": "1.0.2",
