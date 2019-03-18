@@ -54,6 +54,8 @@ require('./controllers/general-routes/html-routes.js')(app);
 require('./controllers/general-routes/api-routes.js')(app);
 require('./controllers/bol-routes/api-routes.js')(app);
 require('./controllers/bol-routes/html-routes.js')(app);
+require('./controllers/merrill-routes/api-routes.js')(app);
+require('./controllers/merrill-routes/html-routes.js')(app);
 
 /**
  * show 404 page if no route has been hit

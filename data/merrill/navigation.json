@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "categories": [{
+      "title": "Home",
+      "show": true,
+      "link": "/"
+    }, {
+      "title": "Merrill Components",
+      "show": true,
+      "link": "#",
+      "sublinks": [{
+        "title": "overview",
+        "link": "/merrill/components/overview"
+      }, {
+        "title": "alerts",
+        "link": "/merrill/components/alerts"
+      }]
+    }]
+  }
+}

@@ -8,7 +8,7 @@
     "colors": {
       "show": true,
       "title": "colors",
-      "link": "colors",
+      "link": "/bol/styles/colors",
       "status-color": "red",
       "status": "Not ready",
       "version": "v0.1",

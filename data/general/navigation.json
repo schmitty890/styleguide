@@ -4,6 +4,17 @@
       "title": "Getting Started",
       "show": true,
       "link": "/getting-started"
+    }, {
+      "title": "Platforms",
+      "show": true,
+      "link": "#",
+      "sublinks": [{
+        "title": "Benefits Online",
+        "link": "/bol"
+      }, {
+        "title": "Merrill",
+        "link": "/merrill"
+      }]
     },{
       "title": "Styles",
       "show": true,
@@ -14,17 +25,6 @@
       },{
         "title": "colors",
         "link": "/styles/colors"
-      }]
-    }, {
-      "title": "Components",
-      "show": true,
-      "link": "#",
-      "sublinks": [{
-        "title": "overview",
-        "link": "/components/overview"
-      }, {
-        "title": "alerts",
-        "link": "/components/alerts"
       }]
     }, {
       "title": "Release Notes",
@@ -40,6 +40,17 @@
       }, {
         "title": "alerts",
         "link": "/bol/components/alerts"
+      }]
+    }, {
+      "title": "Merrill Components",
+      "show": true,
+      "link": "#",
+      "sublinks": [{
+        "title": "overview",
+        "link": "/merrill/components/overview"
+      }, {
+        "title": "alerts",
+        "link": "/merrill/components/alerts"
       }]
     }]
   }

@@ -4,7 +4,7 @@
  **/
 var indexData = require('../../data/general/indexData.json');
 var stylesData = require('../../data/stylesData.json');
-var componentsData = require('../../data/componentsData');
+// var componentsData = require('../../data/componentsData');
 var navigation = require('../../data/general/navigation.json');
 var releaseNotesData = require('../../data/releaseNotesData.json');
 var fs = require("fs");
@@ -15,7 +15,7 @@ module.exports = function (app) {
     // assign the handlebar object any data to be read into the template. this separates the data from the markup.
     var hbsObject = {
       pageData: indexData,
-      headerData: componentsData,
+      headerData: 'componentsData',
       nav: navigation
     };
     // console.log(hbsObject);
@@ -63,25 +63,25 @@ module.exports = function (app) {
   });
 
   // Components Pages
-  app.get('/components/:category', function(req, res) {
-    var category = req.params.category;
-    var hbsObject = {
-      nav: navigation
-    };
-    var page = '';
+  // app.get('/components/:category', function(req, res) {
+  //   var category = req.params.category;
+  //   var hbsObject = {
+  //     nav: navigation
+  //   };
+  //   var page = '';
 
-    if(category === 'overview') {
-      hbsObject.pageData = componentsData;
-      page = 'pages/components-overview';
-    } else {
-      hbsObject.pageData = componentsData.components[category];
-      page = 'pages/components';
-    }
+  //   if(category === 'overview') {
+  //     hbsObject.pageData = componentsData;
+  //     page = 'pages/components-overview';
+  //   } else {
+  //     hbsObject.pageData = componentsData.components[category];
+  //     page = 'pages/components';
+  //   }
 
-    res.render(page, {
-      hbsObject: hbsObject
-    });
-  });
+  //   res.render(page, {
+  //     hbsObject: hbsObject
+  //   });
+  // });
 
   // Release Notes
   app.get('/release-notes', function(req, res) {
@@ -97,9 +97,9 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/api/components', function (req, res) {
-    res.send(componentsData);
-  });
+  // app.get('/api/components', function (req, res) {
+  //   res.send(componentsData);
+  // });
 
   // app.get('/test/markdown', function (req, res) {
   //   // assign the handlebar object any data to be read into the template. this separates the data from the markup.

@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "categories": [{
+      "title": "Home",
+      "show": true,
+      "link": "/"
+    }, {
+      "title": "BOL Components",
+      "show": true,
+      "link": "#",
+      "sublinks": [{
+        "title": "overview",
+        "link": "/bol/components/overview"
+      }, {
+        "title": "alerts",
+        "link": "/bol/components/alerts"
+      }]
+    }]
+  }
+}
