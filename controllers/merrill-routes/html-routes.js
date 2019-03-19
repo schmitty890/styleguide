@@ -6,7 +6,7 @@ var merrillComponentsData = require('../../data/merrill/components.json');
 var navigation = require('../../data/merrill/navigation.json');
 
 module.exports = function (app) {
-  // BOL Components Pages
+  // merrill Components Pages
   app.get('/merrill/components/:category', function(req, res) {
     var category = req.params.category;
     var hbsObject = {

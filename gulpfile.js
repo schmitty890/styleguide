@@ -23,6 +23,7 @@ gulp.task('default', function(done) {
 
 // starts browsersync and watches changes on less and client side js files. when changes are made, kickoff less task or concatScripts task
 gulp.task('serve', ['browser-sync'], function() {
+  gulp.watch('public/assets/less-merrill/*/*.less', ['less-merrill']);
   gulp.watch('public/assets/less-bol/*/*.less', ['less-bol']);
   gulp.watch('public/assets/styleguide-less/*/*.less', ['styleguide-less']);
   gulp.watch('public/assets/less/*/*.less', ['less']);
@@ -39,7 +40,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 });
 
 // nodemon watches our application to keep it running when changes are made so we don't have to stop and restart everytime a change is made
-gulp.task('nodemon', ['less-bol', 'styleguide-less', 'less', 'concatScripts'], function(done) {
+gulp.task('nodemon', ['less-merrill', 'less-bol', 'styleguide-less', 'less', 'concatScripts'], function(done) {
   let running = false;
   return nodemon({
     script: 'server.js',
@@ -70,6 +71,22 @@ gulp.task('less', function() {
   .pipe(gulp.dest('build/css'))
   .pipe(cleanCSS())
   .pipe(rename('styles.min.css'))
+  .pipe(maps.write('./'))
+  .pipe(gulp.dest('build/css'))
+});
+
+// creates our minified less file for the styleguide itself, writes it to the build folder
+gulp.task('less-merrill', function() {
+  return gulp.src('public/assets/less-merrill/styles.less')
+  .pipe(maps.init())
+  .pipe(less())
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(gulp.dest('build/css'))
+  .pipe(cleanCSS())
+  .pipe(rename('merrill-styles.min.css'))
   .pipe(maps.write('./'))
   .pipe(gulp.dest('build/css'))
 });
