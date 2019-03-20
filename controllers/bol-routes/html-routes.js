@@ -6,6 +6,11 @@ var bolComponentsData = require('../../data/bol/components.json');
 var navigation = require('../../data/bol/navigation.json');
 
 module.exports = function (app) {
+
+  app.get('/bol', function(req, res) {
+    res.send('bol page');
+  });
+
   // BOL Components Pages
   app.get('/bol/components/:category', function(req, res) {
     var category = req.params.category;

@@ -6,6 +6,11 @@ var merrillComponentsData = require('../../data/merrill/components.json');
 var navigation = require('../../data/merrill/navigation.json');
 
 module.exports = function (app) {
+
+  app.get('/merrill', function(req, res) {
+    res.send('merrill page');
+  });
+
   // merrill Components Pages
   app.get('/merrill/components/:category', function(req, res) {
     var category = req.params.category;
