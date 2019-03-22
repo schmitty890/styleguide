@@ -8,7 +8,18 @@ var navigation = require('../../data/bol/navigation.json');
 module.exports = function (app) {
 
   app.get('/bol', function(req, res) {
-    res.send('bol page');
+    // assign the handlebar object any data to be read into the template. this separates the data from the markup.
+    var hbsObject = {
+      // pageData: indexData,
+      // headerData: 'componentsData',
+      // nav: navigation
+    };
+    // console.log(hbsObject);
+    // console.log(hbsObject);
+    res.render('index', {
+      title: 'Home', // pass any value to handlebar template
+      hbsObject: hbsObject
+    });
   });
 
   // BOL Components Pages

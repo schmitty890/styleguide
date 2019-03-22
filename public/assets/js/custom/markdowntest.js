@@ -98,7 +98,7 @@
             $('.fa.fa-eye.no-disable').trigger('click'); // toggle the preview mode @TODO: find option in simplemde library that toggles this. https://github.com/sparksuite/simplemde-markdown-editor
             $('.editor-toolbar').toggle();
             // location.reload();
-          });          
+          });
         }
       });
     }
